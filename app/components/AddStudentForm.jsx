@@ -48,31 +48,31 @@ const AddStudentForm = ({ onAddStudent }) => {
           placeholder="First Name"
           value={firstName}
           onChange={(e) => setFirstName(e.target.value)}
-          className="w-full p-2 border border-gray-300 rounded"
+          className="w-full p-2 bg-gray-50 border border-gray-300 rounded"
         />
         <input
           type="text"
           placeholder="Last Name"
           value={lastName}
           onChange={(e) => setLastName(e.target.value)}
-          className="w-full p-2 border border-gray-300 rounded"
+          className="w-full p-2 bg-gray-50 border border-gray-300 rounded"
         />
         <input
           type="date"
           value={dateOfBirth}
           onChange={(e) => setDateOfBirth(e.target.value)}
-          className="w-full p-2 border border-gray-300 rounded"
+          className="w-full p-2 bg-gray-50 border border-gray-300 rounded"
         />
         <input
           type="text"
           placeholder="Current Grade"
           value={currentGrade}
           onChange={(e) => setCurrentGrade(e.target.value)}
-          className="w-full p-2 border border-gray-300 rounded"
+          className="w-full p-2 bg-gray-50 border border-gray-300 rounded"
         />
         <button
           type="submit"
-          className="bg-blue-500 text-white px-4 py-2 rounded hover:bg-blue-600"
+          className="bg-blue-800 text-white px-4 py-2 rounded hover:bg-blue-700"
         >
           Add Student
         </button>
