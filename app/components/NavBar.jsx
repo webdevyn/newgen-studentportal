@@ -1,14 +1,4 @@
 import React from 'react';
-
-/**
- * Navbar Component
- * 
- * Author: Simranjit Kaur Gill
- * Date: June 17, 2025
- * Description:
- * Simple fixed top navbar with links using Tailwind CSS and Material Icons.
- */
-
 const Navbar = () => {
   const items = [
     { label: 'Home', icon: 'home' },
