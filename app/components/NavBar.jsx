@@ -6,30 +6,40 @@ import React from 'react';
  * Name: Simranjit Kaur Gill
  * Date: June 17, 2025
  * Description:
- * Renders a fixed navigation bar at the top of the page.
- * Styled using Tailwind CSS with links to Home, Add Student, About, and Student List.
- * This is a static and responsive UI component.
+ * Simple fixed top navbar with links using Tailwind CSS and Material Icons.
  */
 
-function Navbar() {
-  return React.createElement(
-    'nav',
-    { className: 'bg-gray-800 p-4 fixed w-full' },
-    React.createElement(
-      'ul',
-      { className: 'flex space-x-6 justify-center' },
-      ['Home', 'Add Student', 'About', 'Student List'].map((text, index) =>
-        React.createElement(
-          'li',
-          {
-            key: index,
-            className: 'text-white hover:underline cursor-pointer px-4',
-          },
-          text
-        )
-      )
-    )
+const Navbar = () => {
+  const items = [
+    { label: 'Home', icon: 'home' },
+    { label: 'Add Student', icon: 'person_add' },
+    { label: 'About', icon: 'info' },
+    { label: 'Student List', icon: 'list' }
+  ];
+
+  return (
+    <>
+      <link
+        rel="stylesheet"
+        href="https://fonts.googleapis.com/icon?family=Material+Icons"
+      />
+      <nav className="fixed top-0 w-full bg-gray-800 p-3 flex justify-center gap-8 shadow-md z-50">
+        {items.map(({ label, icon }) => (
+          <a
+            href="#"
+            key={label}
+            className="flex items-center gap-1 text-white hover:text-indigo-400 cursor-pointer select-none"
+          >
+            <span className="material-icons text-base">{icon}</span>
+            <span className="text-sm">{label}</span>
+          </a>
+        ))}
+      </nav>
+    </>
   );
-}
+};
 
 export default Navbar;
+
+
+
