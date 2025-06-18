@@ -3,7 +3,7 @@ import React from 'react';
 /**
  * Navbar Component
  * 
- * Name: Simranjit Kaur Gill
+ * Author: Simranjit Kaur Gill
  * Date: June 17, 2025
  * Description:
  * Simple fixed top navbar with links using Tailwind CSS and Material Icons.
