@@ -1,35 +1,24 @@
-import React from 'react';
-const Navbar = () => {
-  const items = [
-    { label: 'Home', icon: 'home' },
-    { label: 'Add Student', icon: 'person_add' },
-    { label: 'About', icon: 'info' },
-    { label: 'Student List', icon: 'list' }
-  ];
+import React from "react";
 
+const NavBar = () => {
   return (
-    <>
-      <link
-        rel="stylesheet"
-        href="https://fonts.googleapis.com/icon?family=Material+Icons"
-      />
-      <nav className="fixed top-0 w-full bg-gray-800 p-3 flex justify-center gap-8 shadow-md z-50">
-        {items.map(({ label, icon }) => (
-          <a
-            href="#"
-            key={label}
-            className="flex items-center gap-1 text-white hover:text-indigo-400 cursor-pointer select-none"
-          >
-            <span className="material-icons text-base">{icon}</span>
-            <span className="text-sm">{label}</span>
-          </a>
-        ))}
-      </nav>
-    </>
+    <nav className="flex flex-row justify-evenly bg-gradient-to-r from-blue-200 to-purple-100 shadow-md rounded-b-lg p-4">
+      <div className="flex justify-center items-center space-x-60">
+        <a
+          href="#StudentList"
+          className="hover:underline text-xl font-bold text-gray-700"
+        >
+          Student List
+        </a>
+        <a
+          href="#AddStudent"
+          className="hover:underline text-xl font-bold text-gray-700"
+        >
+          Add Student
+        </a>
+      </div>
+    </nav>
   );
 };
 
-export default Navbar;
-
-
-
+export default NavBar;
