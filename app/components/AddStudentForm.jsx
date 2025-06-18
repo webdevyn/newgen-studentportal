@@ -13,6 +13,20 @@ const AddStudentForm = ({ onAddStudent }) => {
       alert("Please fill in all fields");
       return;
     }
+    if (firstName.length < 2 || lastName.length < 2) {
+      alert("First and Last names must be at least 2 characters long");
+      return;
+    }
+    if (dateOfBirth < "1900-01-01") {
+      alert("Date of Birth must be after January 1, 1900");
+      return;
+    }
+    if (currentGrade && !/^[A-F][+-]?$/.test(currentGrade)) {
+      alert(
+        "Current Grade must be a valid grade (A, B, C, D, F, with optional + or -)"
+      );
+      return;
+    }
     onAddStudent({
       firstName,
       lastName,
